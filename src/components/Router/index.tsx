@@ -7,9 +7,9 @@ export const Router: ComponentType = () => {
         <DefaultRouter>
             <Routes>
                 {pages.map((page) => (
-                    <Route key={page.path} path={page.path}></Route>
+                    <Route key={page.path} path={page.path} />
                 ))}
-                <Route></Route>
+                <Route key="*" element={<Navigate to="/" />} />
             </Routes>
         </DefaultRouter>
     )
